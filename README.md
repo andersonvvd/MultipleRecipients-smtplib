@@ -12,7 +12,7 @@ pip install email
 
 ### Note
 
-If your using gmail to send emails you need to follow these steps:
+If you are using gmail to send emails you need to follow these steps:
 
 ["Allowing less secure apps to access your account" support page](https://support.google.com/accounts/answer/6010255)
 

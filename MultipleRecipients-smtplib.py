@@ -10,8 +10,8 @@ import csv
 # csv path
 csv_path = 'recipients.csv' 
 
-with open(csv_path, 'r') as csv:
-    reader = csv.reader(csv, delimiter=',')
+with open(csv_path, 'r') as f:
+    reader = csv.reader(f, delimiter=',')
     # get header from first row
     headers = next(reader)
     # get all the rows as a list
@@ -25,7 +25,7 @@ for recipient in recipients:
 
         #informations
         password = 'password' #Your password
-        msg['From'] = 'name@exemple.com' #Your email
+        msg['From'] = 'name@example.com' #Your email
 
         #recipient
         msg['To'] = recipient[1].strip()
@@ -40,7 +40,7 @@ for recipient in recipients:
           <p> Dear {},</p> 
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
           <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-          <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
+          <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
           </body>
         </html>
         """, recipient[0])
